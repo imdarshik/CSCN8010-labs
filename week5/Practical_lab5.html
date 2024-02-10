@@ -8338,7 +8338,7 @@ memory usage: 38.1 KB
 <span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">'age'</span><span class="p">,</span> <span class="s1">'sex'</span><span class="p">,</span><span class="s1">'bmi'</span><span class="p">,</span> <span class="s1">'bp'</span><span class="p">,</span> <span class="s1">'s1'</span><span class="p">,</span> <span class="s1">'s3'</span><span class="p">,</span> <span class="s1">'s4'</span><span class="p">,</span> <span class="s1">'s5'</span><span class="p">,</span> <span class="s1">'s6'</span><span class="p">]]</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'target'</span><span class="p">]</span>
 
-<span class="c1"># Performing a three-way split for training (70%), validation (15%), and test (15%) sets using train_test_split</span>
+<span class="c1"># Performing a two-way split for training (85%), and test (15%) sets using train_test_split</span>
 <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.15</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">19</span><span class="p">,</span> <span class="n">stratify</span><span class="o">=</span><span class="n">X</span><span class="p">[</span><span class="s2">"sex"</span><span class="p">])</span>
 
 <span class="c1"># Display dimensions of the data sets</span>
@@ -8382,7 +8382,7 @@ Test size  :  (67, 9)
 <div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Importing necessary libraries for polynomial regression and model evaluation</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Importing necessary libraries for regression and model evaluation</span>
 <span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">PolynomialFeatures</span><span class="p">,</span> <span class="n">StandardScaler</span>
 <span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
 <span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeRegressor</span>
@@ -8451,7 +8451,7 @@ Test size  :  (67, 9)
 <div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Assuming X_train, y_train are your features and labels in the training set</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># X_train, y_train are features and labels in the training set</span>
 <span class="n">k_fold</span> <span class="o">=</span> <span class="n">KFold</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
 
 <span class="c1"># Create scorer objects for MAE, MAPE, and R-squared</span>
@@ -8825,7 +8825,7 @@ Test size  :  (67, 9)
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="o">!</span>jupyter<span class="w"> </span>nbconvert<span class="w"> </span>--to<span class="w"> </span>html<span class="w"> </span>Practical_lab5.ipynb
